@@ -7,10 +7,10 @@ export default class EntryList extends Component {
                 <header className="list__header">
                     <h2>Key</h2>
                     <h2>Value</h2>
-                    <h2>Remove</h2>
+                    <h2>Options</h2>
                 </header>
-                <div>
-                    {this.props.entries.map(entry => <EntryItem key={entry.id} entry={entry} {...this.props.actions}/>)}
+                <div style={{width:"100%"}}>
+                    {this.props.entries.map(entry => <EntryItem key={entry.id} entry={entry} {...this.props.actions} />)}
                 </div>
             </section>
         );

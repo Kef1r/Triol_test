@@ -8,6 +8,7 @@ import EntryInput from './components/EntryInput';
 import {bindActionCreators} from 'redux';
 import * as EntryActions from './actions/entries';
 import Exchange from "./components/Exchange";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
 
     render() {
         return (
+            <MuiThemeProvider>
             <div className="App">
                 <EntryList entries={this.props.entries} actions={this.props.actions} className="entryList"/>
                 <div className="app__wrapper">
@@ -24,6 +26,7 @@ class App extends Component {
                     <Exchange entries={this.props.entries} actions={this.props.actions}/>
                 </div>
             </div>
+            </MuiThemeProvider>
         );
     }
 }

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import EntryArea from "./EntryArea";
 import Export from "./Export";
+import FlatButton from 'material-ui/FlatButton';
+
 
 export default class Exchange extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mode: "import"
+            mode: "export"
         }
 
     }
@@ -15,7 +17,6 @@ export default class Exchange extends Component {
         let modeName = e.target.name;
         this.setState({mode: modeName})
     }
-
 
     render() {
         let element;
@@ -31,8 +32,8 @@ export default class Exchange extends Component {
         return (
             <div className="exchange">
                 <div className="exchange__wrapper">
-                    <button name="import" onClick={this.handelSubmit.bind(this)}>Import</button>
-                    <button name="export" onClick={this.handelSubmit.bind(this)}>Export</button>
+                    <button label="import"  name="import" className="btn" onClick={this.handelSubmit.bind(this)}>import</button>
+                    <button label="export"  name="export" className="btn" onClick={this.handelSubmit.bind(this)}>export</button>
                 </div>
                 {element}
             </div>

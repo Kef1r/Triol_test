@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
+
+
 
 export default class EntryArea extends Component {
     constructor(props) {
@@ -25,9 +29,11 @@ export default class EntryArea extends Component {
     render() {
         return (
             <div className="exchange__area">
-                <textarea  onChange={this.handleChange.bind(this)} value={this.state.data}>
+                <textarea
+                    onChange={this.handleChange.bind(this)} value={this.state.data}>
                 </textarea>
-                <button name="join" onClick={this.handleImport.bind(this)}>Join</button>
+
+                <FlatButton label="join" primary={true} name="join" onClick={this.handleImport.bind(this)}/>
             </div>
         );
     }

@@ -1,5 +1,4 @@
 .App {
-    /*text-align: center;*/
     max-width: 1080px;
     min-width: 320px;
     margin: auto;
@@ -8,31 +7,6 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: space-around;
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-}
-
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-}
-
-.App-intro {
-    font-size: large;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 .entryList {
@@ -47,18 +21,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 0;
-
 }
 
-/*.entry {*/
-/*flex-grow:1*/
-/*}*/
 .exchange {
     width: 100%;
     display: flex;
     flex-direction: column;
-
 }
 
 .exchange__wrapper {
@@ -73,6 +41,7 @@
     flex-direction: column;
     width: 100%;
 }
+
 ::-webkit-scrollbar { width: 3px; height: 3px;}
 ::-webkit-scrollbar-button {  background-color: #666; }
 ::-webkit-scrollbar-track {  background-color: #999;}
@@ -87,12 +56,13 @@
     height: 300px;
 }
 
-
 .list {
-    height: 100vh;
+    max-height: 100vh;
     overflow-y: auto;
     padding-right: 20px;
+    width: 55%;
     min-width: 300px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -121,6 +91,37 @@
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
-    /*margin-left: 20px;*/
 }
 
+.btn__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 170px;
+    max-width: 30%;
+}
+
+.btn {
+    text-transform: uppercase;
+    border: 10px;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    font-size: inherit;
+    font-weight: inherit;
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+    min-width: 88px;
+    color: rgb(0, 188, 212);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    border-radius: 2px;
+    user-select: none;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+.btn:hover {
+    background-color: rgba(153, 153, 153, 0.2);
+}

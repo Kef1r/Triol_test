@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
+
+
 export default class EntryInput extends Component {
     constructor(props) {
         super(props);
@@ -37,9 +41,9 @@ export default class EntryInput extends Component {
     render() {
         return (
             <div className="entryInput">
-                <input name="key" value={this.state.key} onChange={this.handleChange.bind(this)}/> <br/>
-                <input name="value" value={this.state.value} onChange={this.handleChange.bind(this)}/><br/>
-                <button onClick={this.handleAdd.bind(this)}>Add</button>
+                <TextField floatingLabelText="Key" name="key" value={this.state.key} onChange={this.handleChange.bind(this)}/> <br/>
+                <TextField floatingLabelText="Value" name="value" value={this.state.value} onChange={this.handleChange.bind(this)}/><br/>
+                <FlatButton label="add" primary={true} onClick={this.handleAdd.bind(this)}/>
             </div>
         )
     }
