@@ -1,0 +1,126 @@
+.App {
+    /*text-align: center;*/
+    max-width: 1080px;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.entryList {
+    width: 300px;
+    max-width: 70%;
+    flex-basis: 70%;
+    flex-grow: 3;
+}
+
+.app__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+
+}
+
+/*.entry {*/
+/*flex-grow:1*/
+/*}*/
+.exchange {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.exchange__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.exchange__area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}
+
+.exchange__area textarea {
+    border: 1px solid #888;
+    resize: none;
+    height: 300px;
+}
+
+
+.list {
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 20px;
+    min-width: 300px;
+    margin: auto;
+}
+
+.list__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item {
+    width: 100%;
+    margin: 5px auto;
+}
+
+.entryInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    /*margin-left: 20px;*/
+}
+
